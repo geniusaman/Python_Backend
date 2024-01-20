@@ -15,7 +15,7 @@ nltk.download('wordnet')
 def process_user_input(Content, Shipping_Value):
 
 
-    df = pd.read_csv("HS_Code_Refined_Data.csv")
+    df = pd.read_csv(r"data/HS_Code_Refined_Data.csv")
     df = df.dropna(subset=['HS Code', 'Item Description', 'Basic Duty (SCH)', 'IGST', '10% SWS', 'Total duty with SWS of 10% on BCD'])
     HS_code = df['HS Code'].tolist()
     item_descriptions = df['Item Description'].tolist()
@@ -60,7 +60,7 @@ def process_user_input(Content, Shipping_Value):
 
 def initialize_google_sheet():
     scope = ['https://spreadsheets.google.com/feeds', 'https://www.gooleapis.com/auth/drive']
-    gc = gspread.service_account(filename='innate-booking-399709-4ca128908c3c.json')
+    gc = gspread.service_account(filename=r'data/innate-booking-399709-4ca128908c3c.json')
     sh_glide = gc.open_by_key('1TgA5YVucHUnqm0t-X2763sJQUauUAE90CDg-0V-IwfU')
     worksheet = sh_glide.worksheet("Sheet1")
     value_list = worksheet.get_all_records()
@@ -68,7 +68,7 @@ def initialize_google_sheet():
 
 def get_rates(weight_inputs):
     # Load Excel data
-    excel_file_path = "MyShippingGenie_ShippingRate_Sample.xlsx"
+    excel_file_path = r"data/MyShippingGenie_ShippingRate_Sample.xlsx"
     shipping_df = pd.read_excel(excel_file_path)
     matching_rows = shipping_df[shipping_df['Weight  (lbs)'] == weight_inputs]
 

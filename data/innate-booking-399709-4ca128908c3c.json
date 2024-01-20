@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "innate-booking-399709",
+  "private_key_id": "4ca128908c3ca99851bf5aab9ff0ffd72fed7038",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDdw5hq2Aj2KO3X\n/vKnueRMwNi3biL/2QFDYv7fROewymSwJ7G/dKiIJDz/oX7d2Xlxpzev0SBL1kW7\n33Lb5c3mPt0hd3MxlyLYbx0AnzKi+ios7o1NtsXAIgeyJFWcOUaI0nTwm+nWcV3H\nQbdqLA6wAKzaJDjhsXb4JxNLsCn4LzKeC7bNef4W6RowtCZ3XqmnKFQRUanhDGNV\noB9nFcNMhAXoTaw6/JhRJ71znOGfN3eBsE0Oq3B7S0Gf+mLRx9PNfF1JoD/Rc6mm\ni0d5Klj1lUHD6UMkns87vNW1O5eoal7Gz8ArZpQmkyFb29RYcYF+Twms1R7jARhg\nulBdWYIZAgMBAAECggEAGrfSdNn1H3JAMKAz7FMMT1aDLbtoXlaO7UdfsXbn6rAB\nyErqAoj7tpZWHo7enfwyAmhNAGLj3xswYOGboSR7ZYCArCPr9icxQK4HaqAjjcjx\n3KK7lce95Md80aDIyzcH2Vtw0R3Zwxc6vxNa9aDb/qbALJKFY2S6Eo0DqUBu2Aqf\nNd4YDmb3P3JHZdXN+c2CjUhnjDfwNz0NZBVao1KYjQjwpuRujnfO8Ut8ynloYagn\nr4aztkcHeKO3PE1sHnhSO08dZYe47PAfd0tKqHwm3U3AhJkM05Mb4fDnw4UcOT0g\ng9Uw9mMMPZ4JuHhfjPKgDCM37zBkxogYpf5Gc8FLAQKBgQD5+pGjEKsN2s7Lgo/R\n4/ZFnqjNKclXzGXMlqTN5RDwtgzAa1G9sHVNo59TMYBU0ZO1fAnTnRjjFHbArDIy\ncfjuKB+FLZLIb2tAz0ItpUJ+H2FcXfz5nuWGD5g4Vckf1rO9wis8dhTl/Y0mxwHS\nnmgkRgXYwMlWd1QgdvdBpO5HAQKBgQDjGwwi98d48eiBDV3p9fFWfdfF4VHxZpGA\nk79FDVc5IEzZbEze9BUpPUUarwsAkm+Znk8Pn3t3yn9RqP/lg+6qAGBNd+um0biS\n0Fz7LhTadAJJwdZOuusPHHMV5VqjWcHB+OthH6aUzhELRkL+Fs5w/ikuHtxlLvD2\nscSAhk+TGQKBgQCqbmWg8ZpOBeJ76fY4Od4MNVINHvJBRAAb7pFKN2THWLd08TZ3\nx7kSR/42cEd4jLLSR1FDz5XKLIeScVSABCid5wkmeZ3bves38pbCHCwrZSWyHfp+\nDhGax0MXFZXceTtuotVrkW5KKAZ2a7QYbxu9r2gJEdezdgQLZlDJlrNGAQKBgCD0\nfdBdMD7mq5x+ehBHNhwc6sC2L5PeFGMaDXlRtER/4WbzhjwcIy32zB5RJEGS/krG\nZCaaN+psIgmRgoClom5c25yiODne2O/E+JkiWLhSeTqGvDh0e0OYF0MoIvztO2aQ\nXmebliqltGd0bKg+Wvqehw9APy8XnrPNm/wigU2RAoGAT69f7TxMHXZF40QACiOs\ndirzCLqRuzfT2QlPu50jkfCcsefJwtKEgGACjvls2Gbvup24l7CmD4eNdTKVSkkl\nTKjQER3E40KuCMhWMMpSNpumozkCQl/cjCaR4ICC4O8HFoFqzvUbo1iq5DqRip4V\nVedGrtCKjW8bGzwgtKlFIGc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kalkiinkalyugaservice@innate-booking-399709.iam.gserviceaccount.com",
+  "client_id": "100995713510723911984",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kalkiinkalyugaservice%40innate-booking-399709.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

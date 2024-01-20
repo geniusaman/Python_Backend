@@ -1,6 +1,6 @@
 transformers
 nltk
-gspread
+gspread==5.12.4
 pandas
 torch
 openpyxl

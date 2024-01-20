@@ -15,7 +15,7 @@ nltk.download('wordnet')
 def process_user_input(Content, Shipping_Value):
 
 
-    df = pd.read_csv(r"data/HS_Code_Refined_Data.csv")
+    df = pd.read_csv(r'data/HS_Code_Refined_Data.csv')
     df = df.dropna(subset=['HS Code', 'Item Description', 'Basic Duty (SCH)', 'IGST', '10% SWS', 'Total duty with SWS of 10% on BCD'])
     HS_code = df['HS Code'].tolist()
     item_descriptions = df['Item Description'].tolist()
@@ -68,7 +68,7 @@ def initialize_google_sheet():
 
 def get_rates(weight_inputs):
     # Load Excel data
-    excel_file_path = r"data/MyShippingGenie_ShippingRate_Sample.xlsx"
+    excel_file_path = r'data/MyShippingGenie_ShippingRate_Sample.xlsx'
     shipping_df = pd.read_excel(excel_file_path)
     matching_rows = shipping_df[shipping_df['Weight  (lbs)'] == weight_inputs]
 

@@ -6,6 +6,8 @@ import smtplib
 import time
 from transformers import pipeline, AutoTokenizer, AutoModelForQuestionAnswering
 from nltk.stem import WordNetLemmatizer
+import os
+from os.path import dirname, abspath, join
 import nltk
 # Download NLTK data
 nltk.download('wordnet')
@@ -14,8 +16,10 @@ nltk.download('wordnet')
 # Function to process user input
 def process_user_input(Content, Shipping_Value):
 
-
-    df = pd.read_csv(r'data/HS_Code_Refined_Data.csv')
+    # Assuming the script is in the project root
+    script_dir = dirname(abspath(__file__))
+    file_path = (join(script_dir, '..', 'data', 'HS_Code_Refined_Data.csv'), 'r')
+    df = pd.read_csv(file_path)
     df = df.dropna(subset=['HS Code', 'Item Description', 'Basic Duty (SCH)', 'IGST', '10% SWS', 'Total duty with SWS of 10% on BCD'])
     HS_code = df['HS Code'].tolist()
     item_descriptions = df['Item Description'].tolist()
@@ -60,7 +64,9 @@ def process_user_input(Content, Shipping_Value):
 
 def initialize_google_sheet():
     scope = ['https://spreadsheets.google.com/feeds', 'https://www.gooleapis.com/auth/drive']
-    gc = gspread.service_account(filename=r'data/innate-booking-399709-4ca128908c3c.json')
+    script_dir0 = dirname(abspath(__file__))
+    file_path0 = (join(script_dir0, '..', 'data', 'innate-booking-399709-4ca128908c3c.json'), 'r')
+    gc = gspread.service_account(filename=file_path0)
     sh_glide = gc.open_by_key('1TgA5YVucHUnqm0t-X2763sJQUauUAE90CDg-0V-IwfU')
     worksheet = sh_glide.worksheet("Sheet1")
     value_list = worksheet.get_all_records()
@@ -68,8 +74,9 @@ def initialize_google_sheet():
 
 def get_rates(weight_inputs):
     # Load Excel data
-    excel_file_path = r'data/MyShippingGenie_ShippingRate_Sample.xlsx'
-    shipping_df = pd.read_excel(excel_file_path)
+    script_dir1 = dirname(abspath(__file__))
+    file_path1 = (join(script_dir1, '..', 'data', 'MyShippingGenie_ShippingRate_Sample.xlsx'), 'r')
+    shipping_df = pd.read_excel(file_path1)
     matching_rows = shipping_df[shipping_df['Weight  (lbs)'] == weight_inputs]
 
     #rate = None

@@ -18,7 +18,7 @@ def process_user_input(Content, Shipping_Value):
 
     # Assuming the script is in the project root
     script_dir = dirname(abspath(__file__))
-    file_path = (join(script_dir, '..', 'data', 'HS_Code_Refined_Data.csv'), 'r')
+    file_path = join(script_dir, '..', 'data', 'HS_Code_Refined_Data.csv')
     df = pd.read_csv(file_path)
     df = df.dropna(subset=['HS Code', 'Item Description', 'Basic Duty (SCH)', 'IGST', '10% SWS', 'Total duty with SWS of 10% on BCD'])
     HS_code = df['HS Code'].tolist()
@@ -78,7 +78,7 @@ def initialize_google_sheet():
 def get_rates(weight_inputs):
     # Load Excel data
     script_dir1 = dirname(abspath(__file__))
-    file_path1 = (join(script_dir1, '..', 'data', 'MyShippingGenie_ShippingRate_Sample.xlsx'), 'r')
+    file_path1 = join(script_dir1, '..', 'data', 'MyShippingGenie_ShippingRate_Sample.xlsx')
     shipping_df = pd.read_excel(file_path1)
     matching_rows = shipping_df[shipping_df['Weight  (lbs)'] == weight_inputs]
 
@@ -91,7 +91,7 @@ def get_rates(weight_inputs):
             to_country = row['To Country']
             rate = row['Rate (USD)']
             #print(f"From {from_country} to {to_country}: ${rate}")
-        return f'From {from_country} to {to_country} rate is ${rate}' # Return rate after the loop
+        return f'From {from_country} to {to_country} rate is ${rate}'  # Return rate after the loop
 
 
 

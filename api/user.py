@@ -62,15 +62,18 @@ def process_user_input(Content, Shipping_Value):
             return f"\n [+] HS Code Info: {hs_code_info}\n [+] Total Duty Info: {total_duty_info}\n [+] Total Value Info: {total_value_info}"
     return  f'[*] Sorry AI Fails Here Due to Less Human intervention on tarning Data! \n [!] Please provide more information of {Content}'
 
+
+
 def initialize_google_sheet():
-    scope = ['https://spreadsheets.google.com/feeds', 'https://www.gooleapis.com/auth/drive']
+    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
     script_dir0 = dirname(abspath(__file__))
-    file_path0 = (join(script_dir0, '..', 'data', 'innate-booking-399709-4ca128908c3c.json'), 'r')
+    file_path0 = join(script_dir0, '..', 'data', 'innate-booking-399709-4ca128908c3c.json')
     gc = gspread.service_account(filename=file_path0)
     sh_glide = gc.open_by_key('1TgA5YVucHUnqm0t-X2763sJQUauUAE90CDg-0V-IwfU')
     worksheet = sh_glide.worksheet("Sheet1")
     value_list = worksheet.get_all_records()
     return worksheet, value_list
+
 
 def get_rates(weight_inputs):
     # Load Excel data
